@@ -1,6 +1,6 @@
 ### ROBOTIUM FIRST APPROACH
 ##### *SUMMARY:*
-The following repository intends to provide a base for UI android tests designed through Robotium framework.
+The following repository intends to provide a base for UI android tests designed through [**Robotium**](https://github.com/robotiumtech/robotium) framework.
 
 ##### *PRECONDITIONS:*
 - Android Studio
@@ -20,8 +20,13 @@ The following repository intends to provide a base for UI android tests designed
 
 ##### *REPORTS:*
 
-In order to review the reports run the following command on the terminal.
+In order to review the basic reports run the following command on the terminal.
 - UNIX: ` ./gradlew connectedAndroidTest `
 - WINDOWS: ` .\gradlew connectedAndroidTest `
-
 Navigate to the ` app\build\reports ` folder and open the **index.html** file on a browser to review the results.
+
+For a ***prettified*** report with screenshots and parallel execution [**Spoon**](https://github.com/jaredsburrows/gradle-spoon-plugin) plugin was added, run the following command on the terminal.
+- UNIX: ` ./gradlew spoon `
+- WINDOWS: ` .\gradlew spoon `
+
+And navigate to the ` app\build\spoon-output\debug ` folder and open the **index.html** file on a browser to review the results.

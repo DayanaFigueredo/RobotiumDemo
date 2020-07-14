@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'spoon'
 
 android {
     compileSdkVersion 28
@@ -16,6 +17,25 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+}
+
+spoon {
+    // Identifying title for this execution. ("Spoon Execution" by default)
+    title = "My tests"
+
+    // Path to output directory. ("$buildDir/spoon-output" by default)
+    baseOutputDir = "$buildDir/spoon-output"
+
+    // Whether or not debug logging is enabled. (false by default)
+    debug = true
+
+    // Set ADB timeout. (minutes) (default is 10 mins)
+    adbTimeout = 5
+
+    // Add device serials for test execution
+    devices = ["emulator-5554", "emulator-5556"]
+
+    singleInstrumentationCall = true
 }
 
 dependencies {
