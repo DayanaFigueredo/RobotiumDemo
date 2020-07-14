@@ -42,9 +42,9 @@ public class RobotiumTextExample{
         solo.unlockScreen();
         Button btn_test=(Button) solo.getView(R.id.btn_test);
         solo.clickOnView(btn_test);
-        solo.waitForText("hello",1,2000);
+        solo.waitForText("hello_world",1,2000);
         TextView tv=(TextView) solo.getView(R.id.main_tv);
-        String result=tv.getText().toString();
+        result=tv.getText().toString();
         try{
             Spoon.screenshot(solo.getCurrentActivity(),"Evidence");}
         catch (RuntimeException ignored){}
